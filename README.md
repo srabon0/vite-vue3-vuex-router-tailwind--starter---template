@@ -1,7 +1,44 @@
-# Vue 3 + Vite
+## steps to set up vue3 + vite + tailwind + vuex + vue router
+Create Vite App
+npm init @vitejs/app project-name
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Install Tailwind + dependencies
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 
-## Recommended IDE Setup
+## Install Vue Router
+npm install vue-router@4
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Install Vuex
+npm install vuex@next --save
+
+## Install ESLint + Prettier
+npm install --save-dev eslint prettier eslint-plugin-vue eslint-config-prettier
+
+
+## eslint config
+.eslintrc.js:
+module.exports = {
+extends: [
+  'plugin:vue/vue3-essential',
+  'prettier',
+],
+rules: {
+  // override/add rules settings here, such as:
+  'vue/no-unused-vars': 'error',
+},
+}
+
+
+## prettier config
+.prettierrc.js:
+module.exports = {
+    semi: false,
+    tabWidth: 4,
+    useTabs: false,
+    printWidth: 80,
+    endOfLine: 'auto',
+    singleQuote: true,
+    trailingComma: 'es5',
+    bracketSpacing: true,
+    arrowParens: 'always',
+  }
